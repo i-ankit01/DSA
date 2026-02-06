@@ -16,7 +16,20 @@ public class ReverseWordsInString {
     }
 
     public static String reverseWordsWithoutSplit(String s) {
-        
+        StringBuilder res = new StringBuilder();
+        s = s.trim();
+        int start = s.length()-1;
+        int end = s.length()-1;
+        while(start>=0){
+            if(s.charAt(start) == ' '){
+                res.append(s.substring(start+1, end+1) + " ");
+                while(start >= 0 && s.charAt(start) == ' ') start--;
+                end = start;
+            }
+            else start--;
+        }
+        res.append(s.substring(start+1, end+1));
+        return res.toString();
     }
 
     public static void main(String[] args) {
