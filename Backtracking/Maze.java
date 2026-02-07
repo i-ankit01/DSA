@@ -82,7 +82,7 @@ public class Maze {
     }
 
     public static void main(String[] args) {
-        int[][] maze = new int[3][3];
+        // int[][] maze = new int[3][3];
         boolean[][] booleanMaze = { { true, true, true }, { true, false, true }, { true, true, true } };
         // Assuming target is at the last cell
 
