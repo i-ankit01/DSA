@@ -14,7 +14,7 @@ public class IsomorphicStrings {
         for (int i = 0; i < t.length(); i++) {
             if(sArr[s.charAt(i)] != tArr[t.charAt(i)]) return false;
 
-            // this makes sures that both the characters occurred at the same index last time
+            // this makes sures that both the characters occurred at the same index (pos) last time
             sArr[s.charAt(i)] = i+1;
             tArr[t.charAt(i)] = i+1;
         }
